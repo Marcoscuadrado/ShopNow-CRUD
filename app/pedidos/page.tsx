@@ -42,7 +42,7 @@ export default function PedidosPage() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8003/v1/pedidos", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8003/v1/pedidos", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -77,7 +77,7 @@ export default function PedidosPage() {
     
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://127.0.0.1:8003/v1/pedidos", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8003/v1/pedidos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ export default function PedidosPage() {
     if (formEstado) datosActualizados.estado = formEstado;
 
     try {
-      const res = await fetch(`http://127.0.0.1:8003/v1/pedidos/${formId}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8003/v1/pedidos/${formId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -150,7 +150,7 @@ export default function PedidosPage() {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://127.0.0.1:8003/v1/pedidos/${id_pedido}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8003/v1/pedidos/${id_pedido}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -28,7 +28,7 @@ export default function InventarioPage() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8002/v1/inventario", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8002/v1/inventario", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -58,7 +58,7 @@ export default function InventarioPage() {
     const token = localStorage.getItem("token");
     
     try {
-      const res = await fetch("http://127.0.0.1:8002/v1/inventario", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8002/v1/inventario", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +86,7 @@ export default function InventarioPage() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`http://127.0.0.1:8002/v1/inventario/${formId}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8002/v1/inventario/${formId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ export default function InventarioPage() {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://127.0.0.1:8002/v1/inventario/${id_producto}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8002/v1/inventario/${id_producto}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

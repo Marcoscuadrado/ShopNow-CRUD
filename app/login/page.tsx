@@ -21,7 +21,7 @@ export default function LoginPage() {
 
     try {
       // Ajusta el puerto (ej. 8001) al microservicio donde pusiste la función /token
-      const res = await fetch("http://127.0.0.1:8001/token", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8001/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

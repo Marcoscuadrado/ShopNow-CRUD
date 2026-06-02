@@ -31,7 +31,7 @@ export default function ProductosPage() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8004/v1/productos/", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8004/v1/productos/", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -64,7 +64,7 @@ export default function ProductosPage() {
     
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://127.0.0.1:8004/v1/productos", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8004/v1/productos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ export default function ProductosPage() {
     // Tu modelo ProductoActualizar permite actualizar el 'stock', si quisieras habilitarlo, iría aquí
 
     try {
-      const res = await fetch(`http://127.0.0.1:8004/v1/productos/${formId}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8004/v1/productos/${formId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -130,7 +130,7 @@ export default function ProductosPage() {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://127.0.0.1:8004/v1/productos/${id_producto}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8004/v1/productos/${id_producto}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

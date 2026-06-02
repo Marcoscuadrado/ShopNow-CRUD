@@ -34,7 +34,7 @@ export default function ClientesPage() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8001/v1/clientes", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8001/v1/clientes", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -68,7 +68,7 @@ export default function ClientesPage() {
     
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://127.0.0.1:8001/v1/clientes", {
+      const res = await fetch("http://marcoscuadrado.ddns.net:8001/v1/clientes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export default function ClientesPage() {
     if (formTelefono) datosActualizados.telefono = formTelefono;
 
     try {
-      const res = await fetch(`http://127.0.0.1:8001/v1/clientes/${formId}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8001/v1/clientes/${formId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -138,7 +138,7 @@ export default function ClientesPage() {
 
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://127.0.0.1:8001/v1/clientes/${id_cliente}`, {
+      const res = await fetch(`http://marcoscuadrado.ddns.net:8001/v1/clientes/${id_cliente}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
